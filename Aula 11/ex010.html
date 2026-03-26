@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Multa</title>
+    <style>
+        input{
+            width: 70px;
+            text-align: center;
+        }
+        body{
+            font: normal 20px ARIAL;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você está dirigindo de boa numa avenida</h1>
+    <h3>O limite de velocidade nela é 60 km/hr</h3>
+    Qual a velocidade do seu carro? : 
+    <input type="number" name="vel" id="vel"> km/hr.
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    </div>
+<script>
+    function calcular() {
+        var velo = window.document.getElementById('vel')
+        var velocidade = Number(velo.value)
+        var res = window.document.querySelector('div#res')
+        res.innerHTML = `<p>Então você está a <strong>${velocidade} km/hr</strong>?</p>`
+        
+        if (velocidade > 60) {
+            res.innerHTML += `Você está <strong> MULTADO </strong> por estar acima do limite de velocidade e por ter <strong>ATROPELADO</strong> 43 inocentes durante sua direção perigosa!<p>`
+            res.innerHTML += 'Pelo menos seu KDA tá positivo'
+   
+        } else {
+            res.innerHTML += 'Parabéns, você está seguindo as leis de trânsito e ninguém foi morto!'
+        }
+        res.innerHTML += `<p> Leis existem por um motivo!</p>`
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botão de cabeça</title>
+    <style>
+        div#area {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            background: aquamarine;
+            text-align: center;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="area"><strong>CLIQUE PARA FATOS</strong></div>
+    <script>
+        var area = window.document.getElementById("area")
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrou)
+        area.addEventListener('mouseout', saiu)
+
+        function clicar(){
+            area.innerText = 'Você não é Sigma'
+        }
+        function entrou(){
+            area.innerText = 'Vamo clica aí'
+            area.style.backgroundColor = 'green'
+            area.style.color = 'white'
+
+            
+        }
+        function saiu(){
+            area.innerText = 'A verdade doi né'
+            area.style.backgroundColor = 'red'
+        }
+    </script>
+    
+</body>
+</html>

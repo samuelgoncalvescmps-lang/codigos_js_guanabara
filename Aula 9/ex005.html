@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM </title>
+    <style>
+        body {
+            background: #471b6b;
+            color: white;
+            font: normal 20pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado </p>
+    <p> Aprendendo usar o <strong>DOM</strong> em JAVASCRIPT. </p>  
+    <div id="clica">clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br/>')
+        p1.style.color = 'blue'
+      var corpo = window.document.body
+      var d = window.document.querySelector('div#clica')
+
+      //var d = window.document.getElementById('clica')
+      d.style.color = 'red'
+      
+      //Vô tentar uma graça aqui
+      var namae = window.prompt('Qual é o teu nome?')
+      window.document.write('Era uma vez o <strong>' + namae + '</strong>, aí ele viveu, FIM')
+      //Funcionou eu n sou tão burro assim
+
+
+    </script>
+</body>
+</html>

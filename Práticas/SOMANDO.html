@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMADORA</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+        input{
+            font: normal 20pt Arial;
+            width: 100pt;
+        }
+        div#resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCULADORA QUE SÓ SOMA</h1>
+    <input type="number" name='caixa1' id="caixa1">
+    <input type="number" name="caixa2" id="caixa2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="resultado"> O resultado da soma é: </div>
+    <script>
+        function somar(){
+            var c1 = window.document.getElementById("caixa1")
+            var c2 = window.document.getElementById("caixa2")
+            var resultado = window.document.getElementById("resultado")
+            var ca1 = Number(c1.value)
+            var ca2 = Number(c2.value)
+            var soma = ca1 + ca2
+            resultado.innerHTML = `O resultado da soma é <strong>${soma}</strong>`
+
+        }
+    </script>
+</body>
+</html>

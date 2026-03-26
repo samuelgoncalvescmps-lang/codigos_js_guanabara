@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicadora</title>
+    <style>
+        body {
+            background-color: rgb(212, 164, 172);  
+        }  
+    </style>
+</head>
+<body>
+    <h1>MULTIPLICADORA</h1>
+    <h3><p>Primeiro Número: <input type="number" id="n1"></p></h3>
+    <h3><p>Segundo Número: <input type="number" id="n2"></p></h3>
+    <h4><input type="button" value="Multiplicar" onclick="mult()"></h4>
+   <h2> <div id="result">O resultado vai aparecer aqui -> </div></h2>
+
+<script>
+        
+        function mult() {
+        var result = document.getElementById('result')
+        var n1 = document.getElementById('n1')
+        var n2 = document.getElementById('n2')
+        var num1= Number(n1.value)
+        var num2= Number(n2.value)
+        var mult = num1*num2 
+        result.innerHTML = `O resultado vai aparecer aqui -> ${mult}`
+    }
+</script>
+</body>
+</html>

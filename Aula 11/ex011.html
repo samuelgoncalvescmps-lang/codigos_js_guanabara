@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nois ou eles?</title>
+    <style>
+        body{
+            font: normal 20px Arial;
+        }
+        input{
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra se você é nóis ou eles!</h1>
+    Crias do Brasa: Em qual país você nasceu? : 
+    <input type="text" id="origem"> 
+    <input type="button" value="Descobrir" onclick="verificar()">
+    
+    <div id="res">
+
+    </div>
+    <Script>
+        function verificar(){
+            var p = window.document.getElementById("origem")
+            var pa = p.value
+            var res = window.document.querySelector("div#res")
+            res.innerHTML = `<p>Crias do Brasa: Então você é de <strong>${pa}</strong> então? então é isso?</p>` 
+            if (pa == "Brasil"|| pa == "brasil") {
+                res.innerHTML += `Aaaaaaaaaah então tamo em casa cachorro, cê é dos truta bah é os guri né menó ta chapando jão aoooo trem bão uai sô!`
+            } else {
+                res.innerHTML += `<p><strong>*sons de tiro*</strong></p>`
+                res.innerHTML += "<p><strong>*Vin Diesel chega dando drift e atropela você, que está baleado no chão*</strong></p> Vin Diesel: Aqui é Brasil! >:)"
+            }
+        }
+    </Script>
+</body>
+</html>

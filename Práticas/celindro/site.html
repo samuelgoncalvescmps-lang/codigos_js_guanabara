@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Area Cilindro</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header> 
+        <h1>Calculador de Área de Cilindro</h1>
+    </header>
+    <section>
+        
+        Raio: <input type="number" id="raio"> <select name="Forma de medida" id="fdm">
+
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            
+        </select>
+
+        <p>Altura: <input type="number" id="Altura"> <select name="Forma de medida" id="fdm" >
+
+            <option value="cm" id="cm">cm</option>
+            <option value="m" id="m">m</option>
+
+        </select></p> 
+        
+        <input type="button" value="Calcular" onclick="calcular()">
+        
+        <p>
+            <div id="res">
+            O resultado será exibido aqui! 
+
+        </div>
+    </p>
+
+
+    </section>
+    
+    
+</body>
+<script src="java.js"></script>
+</html>
